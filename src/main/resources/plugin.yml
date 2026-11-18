@@ -1,0 +1,38 @@
+name: HerPlun
+version: ${project.version}
+main: ru.herplun.HerPlun
+api-version: '1.20'
+description: Баны, жалобы и проверка на читы
+commands:
+  ban:
+    description: Забанить игрока навсегда
+    usage: /ban <игрок> [причина]
+  timeban:
+    description: Временный бан игрока
+    usage: /timeban <игрок> <время> [причина]
+  help:
+    description: Список команд HerPlun
+    usage: /help
+  report:
+    description: Пожаловаться на игрока
+    usage: /report <игрок> <причина>
+  check:
+    description: Проверка на читы
+    usage: /check <on|off|tp|time>
+permissions:
+  herplun.ban:
+    default: op
+  herplun.timeban:
+    default: op
+  herplun.help:
+    default: true
+  herplun.report:
+    default: true
+  herplun.check.on:
+    default: op
+  herplun.check.off:
+    default: op
+  herplun.check.tp:
+    default: op
+  herplun.check.time:
+    default: op
