@@ -1,0 +1,126 @@
+# ============================================================
+#  Меню "Инструменты": WorldEdit и WorldGuard.
+#  Кнопки только запускают команды этих плагинов — они должны
+#  быть установлены, а у игрока должны быть их права.
+#  Открыть: /herplun dm open tools
+#  Совет: //pos1 пишется как команда "//pos1" (WorldEdit).
+# ============================================================
+
+menu_title: "&6&lИнструменты"
+size: 27
+open_command: tools
+permission: herplun.axe
+no_permission_message: '&c"HerPlun" У вас нет прав что прописать команду!'
+
+fill_item:
+  material: GRAY_STAINED_GLASS_PANE
+  display_name: " "
+
+items:
+  axe:
+    slot: 10
+    material: WOODEN_AXE
+    display_name: "&6Выдать топорик"
+    lore:
+      - "&7ЛКМ — точка 1, ПКМ — точка 2"
+    left_click_commands:
+      - "[close]"
+      - "[player] herplun axe"
+
+  pos1:
+    slot: 11
+    material: LIME_WOOL
+    display_name: "&aТочка 1"
+    lore:
+      - "&7Команда: //pos1"
+    left_click_commands:
+      - "[close]"
+      - "[player] //pos1"
+
+  pos2:
+    slot: 12
+    material: RED_WOOL
+    display_name: "&cТочка 2"
+    lore:
+      - "&7Команда: //pos2"
+    left_click_commands:
+      - "[close]"
+      - "[player] //pos2"
+
+  copy:
+    slot: 13
+    material: PAPER
+    display_name: "&eКопировать"
+    lore:
+      - "&7Команда: //copy"
+    left_click_commands:
+      - "[close]"
+      - "[player] //copy"
+
+  paste:
+    slot: 14
+    material: BOOK
+    display_name: "&eВставить"
+    lore:
+      - "&7Команда: //paste"
+    left_click_commands:
+      - "[close]"
+      - "[player] //paste"
+
+  undo:
+    slot: 15
+    material: CLOCK
+    display_name: "&dОтменить"
+    lore:
+      - "&7Команда: //undo"
+    left_click_commands:
+      - "[close]"
+      - "[player] //undo"
+
+  help:
+    slot: 16
+    material: KNOWLEDGE_BOOK
+    display_name: "&bСправка"
+    lore:
+      - "&7Список команд WorldEdit и WorldGuard"
+    left_click_commands:
+      - "[close]"
+      - "[player] herplun we"
+
+  rglist:
+    slot: 19
+    material: MAP
+    display_name: "&bМои приваты"
+    lore:
+      - "&7Команда: /rg list"
+    left_click_commands:
+      - "[close]"
+      - "[player] rg list"
+
+  rginfo:
+    slot: 20
+    material: COMPASS
+    display_name: "&bИнформация о приват-регионе"
+    lore:
+      - "&7Команда: /rg info"
+    left_click_commands:
+      - "[close]"
+      - "[player] rg info"
+
+  claim:
+    slot: 21
+    material: OAK_FENCE
+    display_name: "&aСоздать приват"
+    lore:
+      - "&71. Выделите область топориком"
+      - "&72. Введите /rg claim <имя>"
+    left_click_commands:
+      - "[close]"
+      - "[message] &aВыделите область топориком и введите &f/rg claim <имя>"
+
+  back:
+    slot: 26
+    material: ARROW
+    display_name: "&eНазад"
+    left_click_commands:
+      - "[open] example"
