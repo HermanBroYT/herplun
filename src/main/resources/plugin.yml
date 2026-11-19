@@ -1,0 +1,100 @@
+name: HerPlun
+version: ${project.version}
+main: ru.herplun.HerPlun
+api-version: '1.16'
+description: Баны, муты, жалобы, меню, WorldEdit/WorldGuard, анти-чит
+softdepend: [WorldEdit, FastAsyncWorldEdit, WorldGuard, PlaceholderAPI, LuckPerms]
+commands:
+  ban:
+    description: Забанить игрока навсегда
+    usage: /ban <игрок> [причина]
+  unban:
+    description: Разбанить игрока
+    usage: /unban <игрок>
+  timeban:
+    description: Временный бан игрока
+    usage: /timeban <игрок> <время> [причина]
+  mute:
+    description: Замутить игрока
+    usage: /mute <игрок> [время]
+  unmute:
+    description: Снять мут с игрока
+    usage: /unmute <игрок>
+  help:
+    description: Список команд HerPlun
+    usage: /help
+  report:
+    description: Жалобы на игроков
+    usage: /report <игрок> <причина> | /report open | /report cancel <номер>
+  check:
+    description: Проверка на читы
+    usage: /check <on|off|tp|time>
+  voice:
+    description: Ссылка на скачивание голосового чата
+    usage: /voice
+  gm:
+    description: Сменить режим игры
+    usage: /gm <режим> [игрок]
+  gamemode:
+    description: Сменить режим игры
+    usage: /gamemode <режим> [игрок]
+  deluxemenus:
+    description: Меню HerPlun (как DeluxeMenus)
+    usage: /deluxemenus <open|list|reload|help>
+    aliases: [dm]
+  herplun:
+    description: Управление HerPlun
+    usage: /herplun <privilege|technical|dm|axe|we|plugins|stopserver|reload>
+permissions:
+  herplun.ban:
+    default: op
+  herplun.unban:
+    default: op
+  herplun.timeban:
+    default: op
+  herplun.mute:
+    default: op
+  herplun.unmute:
+    default: op
+  herplun.help:
+    default: true
+  herplun.report:
+    default: true
+  herplun.open:
+    default: true
+  herplun.voice:
+    default: true
+  herplun.privilege:
+    default: op
+  herplun.technical:
+    default: op
+  herplun.gm:
+    default: op
+  herplun.gamemode:
+    default: op
+  herplun.anti-cheat:
+    default: op
+  herplun.axe:
+    default: op
+  herplun.plugins:
+    default: op
+  herplun.stopserver:
+    default: op
+  herplun.dm.help:
+    default: true
+  herplun.dm.list:
+    default: true
+  herplun.dm.open:
+    default: true
+  herplun.dm.open.others:
+    default: op
+  herplun.dm.reload:
+    default: op
+  herplun.check.on:
+    default: op
+  herplun.check.off:
+    default: op
+  herplun.check.tp:
+    default: op
+  herplun.check.time:
+    default: op
