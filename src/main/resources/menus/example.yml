@@ -1,0 +1,74 @@
+# ============================================================
+#  Пример меню HerPlun (формат как в DeluxeMenus).
+#  Имя файла = имя меню: example.yml -> меню "example".
+#  Открыть: /herplun dm open example   или   /menu (см. open_command)
+#  После правки: /herplun dm reload
+#  ВНИМАНИЕ: ошибка в отступах (пробелах) ломает меню!
+# ============================================================
+
+menu_title: "&6&lГлавное меню"
+size: 27
+
+# Команда, которая открывает это меню (можно списком)
+open_command: menu
+
+# Если нужно ограничить доступ — уберите # у строки ниже
+# permission: herplun.menu.example
+
+# Действия при открытии / закрытии меню
+open_commands:
+  - "[sound] block.chest.open 1 1"
+close_commands: []
+
+# Предмет, которым заполняются пустые слоты
+fill_item:
+  material: GRAY_STAINED_GLASS_PANE
+  display_name: " "
+
+items:
+  profile:
+    slot: 10
+    material: PLAYER_HEAD
+    skull_owner: "%player_name%"
+    display_name: "&e%player_name%"
+    lore:
+      - "&7Мир: &f%player_world%"
+      - "&7Онлайн: &f%server_online%&7/&f%server_max%"
+
+  report:
+    slot: 12
+    material: BOOK
+    display_name: "&cЖалобы"
+    lore:
+      - "&7Нажмите, чтобы открыть меню жалоб"
+    left_click_commands:
+      - "[close]"
+      - "[player] report open"
+
+  voice:
+    slot: 14
+    material: NOTE_BLOCK
+    display_name: "&aГолосовой чат"
+    lore:
+      - "&7Нажмите, чтобы получить ссылку"
+    left_click_commands:
+      - "[close]"
+      - "[player] voice"
+
+  tools:
+    slot: 16
+    material: WOODEN_AXE
+    display_name: "&6Инструменты"
+    lore:
+      - "&7WorldEdit и WorldGuard"
+    # Виден только тем, у кого есть право
+    permission: herplun.axe
+    left_click_commands:
+      - "[open] tools"
+
+  close:
+    slot: 22
+    material: BARRIER
+    display_name: "&cЗакрыть"
+    click_commands:
+      - "[close]"
